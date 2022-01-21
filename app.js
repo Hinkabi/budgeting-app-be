@@ -7,10 +7,10 @@ app.use(cors())
 app.use(express.json());
 
 app.get("/", (req, res)=>{
-    res.send("Welcome to our budget app");
+    res.send("Welcome to our budget app Backend");
 });
 
-app.use("/budgets", budgetController);
+app.use("/transactions", budgetController);
 
 app.get("*", (req, res)=>{
     res.status(404).json({ error: "Page not found" });
